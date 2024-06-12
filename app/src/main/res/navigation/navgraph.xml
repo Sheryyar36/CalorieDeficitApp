@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/genderSelection">
+    <fragment
+        android:id="@+id/genderSelection"
+        android:name="com.example.caloriedeficitapp.GenderSelection"
+        android:label="@string/app_name"
+        android:layout="@layout/fragment_gender_selection">
+        <action
+            android:id="@+id/show_calorieReq"
+            app:destination="@id/calorieRequirement" />
+    </fragment>
+    <fragment
+        android:id="@+id/calorieRequirement"
+        android:name="com.example.caloriedeficitapp.CalorieRequirements"
+        android:label="@string/app_name"
+        android:layout="@layout/fragment_calorie_requirements">
+        <!--        <argument-->
+        <!--            android:name="gender"-->
+        <!--            android:defaultValue="Male"-->
+        <!--            app:argType="String" />-->
+        <action
+            android:id="@+id/show_activityLevel"
+            app:destination="@id/activityLevel" />
+    </fragment>
+    <fragment
+        android:id="@+id/activityLevel"
+        android:name="com.example.caloriedeficitapp.ActivityLevels"
+        android:label="@string/app_name"
+        android:layout="@layout/fragment_activity_levels">
+        <!--        <argument-->
+        <!--            android:name="calReqInt"-->
+        <!--            android:defaultValue="2000"-->
+        <!--            app:argType="Integer" />-->
+        <action
+            android:id="@+id/show_microIntake"
+            app:destination="@id/macroIntake" />
+    </fragment>
+    <fragment
+        android:id="@+id/macroIntake"
+        android:name="com.example.caloriedeficitapp.MacroIntake"
+        android:label="Macros"
+        tools:layout="@layout/fragment_macro_intake">
+        <!--        <argument-->
+        <!--            android:name="adjCalReq"-->
+        <!--            android:defaultValue="2400"-->
+        <!--            app:argType="Integer" />-->
+        <action
+            android:id="@+id/show_calorieDef"
+            app:destination="@id/calorieDef" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/calorieDef"
+        android:name="com.example.caloriedeficitapp.CalorieDeficit"
+        android:label="Macros"
+        tools:layout="@layout/fragment_macro_intake">
+        <!--        <argument-->
+        <!--            android:name="calDef"-->
+        <!--            android:defaultValue="400"-->
+        <!--            app:argType="Integer" />-->
+    </fragment>
+
+
+</navigation>

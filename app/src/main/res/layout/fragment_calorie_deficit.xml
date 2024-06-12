@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calorieConstraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/burnbackground"
+    tools:context=".CalorieDeficit">
+
+    <TextView
+        android:id="@+id/deficitTextViewHeader"
+        android:layout_width="412dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="66dp"
+        android:text="Your Calorie Deficit:"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/deficitTextView"
+        android:layout_width="412dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="464dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
